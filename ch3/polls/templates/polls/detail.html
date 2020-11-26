@@ -1,0 +1,30 @@
+
+<style>
+.rounded {
+  width: 200px;
+  background-color: #bdf;
+  border:2px solid #1bf;
+  padding:0.5em;
+  line-height: 1em;
+  border-radius:0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  position:absolute;
+  top:50%; left:50%;
+  margin-top:-100px; margin-left:-100px;
+  width:250px; height:200px;
+}
+</style>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<div class='rounded'>
+    <p style="text-align:center ;font-size:1.5em">Pick ME</p>
+<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
+{% for choice in question.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+{% endfor %}
+<input type="submit" value="Vote" />
+</form>
+</div>

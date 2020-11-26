@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PICK ME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+</head>
+<style>
+.rounded {
+  width: 1000px;
+  border:2px solid #222;
+  padding:0.5em;
+  line-height: 1em;
+  border-radius:0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  position:absolute;
+  top:125px; left:30%;
+  margin-top:-100px; margin-left:-100px;
+
+
+}
+</style>
+<body>
+<div class='rounded'>
+    <div class="container body-content">
+        <div class="container">
+            <div class="row justify-content-start" style="padding-top:10px;">
+                {% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <h1><a href="/polls/{{ question.id }}/" >{{ question.question_text }}</a></h1>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+            </div>
+            <div class="row justify-content-start" style="padding-top:10px;">
+                <div class="col" style="padding-top:10px;">
+                    <img src="https://ww.namu.la/s/5dea38529d550aa394595ecb89633700ba812699bf300723b556dcf6f78ccc10a40d809073cc06dccc28f6e3a4a5249ddc00ea4f07569b9131a1732c7ec8691e0d2cfdccb074c1e4f33ef74f4a0af7609261896a5e03a266688239987599c315f4d3d4cc9fb708579ebc87260b23da3e"  width="90%" height="90%" style="max-height:500px;max-width:500px;"  />
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <img  src="https://w.namu.la/s/aaa33714f2813239d3b77acaf226a42dddee72ec152bccc55ea41348b58e428d9493bebcb50bc1e403dc5cc2a739418dfde58d1a0b89115b94b7183400d9485e7f220251684d746369a9fdae6f48ad116cfca7b6c35b3f6d0e9dd9926861118c9aa261e962a564a7887eb4b9e638702c" width="90%" height="90%" style="max-height:500px;max-width:500px;" />
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <img src="https://w.namu.la/s/21d4fa8960f086062be5d46551be47b89704197860c6ecb7b5d1a370f3e0c1cbd4ea7eda82c19cdc72bb2bf29edf9171b9a3815500b66ea70ddb4a21eeed0480753b13ff529b9b5e2d347999e308f32830726453fd8d1323c583f45fa620d827167834793c4d95f4f9e3eed57e7b4b69" width="90%" height="90%" style="max-height:500px;max-width:500px;"  />
+                </div>
+            </div>
+            <div class="row justify-content-start" style="padding-top:10px;">
+                <div class="col" style="padding-top:10px;">
+                    <h1>오마이걸</h1>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <h1>방탄소년단</h1>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <h1>비투비</h1>
+                </div>
+            </div>
+            <div class="row justify-content-start" style="padding-top:10px;">
+                <div class="col" style="padding-top:10px;">
+                    <p class="text-black-50">
+                        멤버 : 효정,승희,유아,미미,비니,아린,지호
+                        <br />
+                        리더 : 효정
+                        <br />
+                        팬덤 : 미라클(Miracle)
+                        <br />
+                    </p>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <p class="text-black-50">
+                        멤버 : 정국,슈가,진,뷔.RM,제이홉,지민
+                        <br />
+                        리더 : RM
+                        <br />
+                        팬덤 : 아미(ARMY)
+                        <br />
+                    </p>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <p class="text-black-50">
+                        멤버 : 서은광,이민혁,이창섭,임현식,프니엘,정일훈,육성재
+                        <br />
+                        리더 : 서은광
+                        <br />
+                        팬덤 : 멜로디(MELODY)
+                        <br />
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-start" style="padding-top:10px;">
+                <div class="col" style="padding-top:10px;">
+                    <img  src="https://w.namu.la/s/3305b3e94c1ef0ac17345d766173247753f6034137a560edaf13f76555947104024dbc44aab3b53bc25f9e59a781170fc05e45a819a85b9924927bc9a68b37b08c74618e17663a3b222970bc87c32d3846eed9ed6a2b8b0158b54b048a3346543e2b4eb2ecd5144940311ba88ea6fad2"  width="90%" height="90%" style="max-height:500px;max-width:500px;" />
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <img src="https://ww.namu.la/s/a9f492f55116ba75c3f4ad4fc7a6e1fc0a8f7346a184b0e62fb7045cebbb18de24237b233ebd8f129eb0d755233561bf3f09dd96b8dad7e2d096e40b467ba59bdb601dc9246c4d9bf3deaa6972a83fd3f1fca879b8adfcf048396a1259dcdb39c8fa445ed5a40a101e8f096ace93be07"  width="90%" height="90%" style="max-height:500px;max-width:500px;" />
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <img src="https://w.namu.la/s/0da83ca4313781a13b6594f32c145c82153a351a908bca1bf2f995d10802d39c76e5822cae378cf95979d384c0d9044796bb425de5e869ba7d0ee487304c481b424aefbbb4e2cf5eee2b650b581fb50b271b0fbb8803cfb4df3f476be7d49ab3da26a7043d868afbac683d83970cceec" width="90%" height="90%" style="max-height:500px;max-width:500px;"  />
+                </div>
+            </div>
+            <div class="row justify-content-start" style="padding-top:10px;">
+                <div class="col" style="padding-top:10px;">
+                    <h1>트와이스</h1>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <h1>하이라이트</h1>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <h1>마마무</h1>
+                </div>
+            </div>
+            <div class="row justify-content-start" style="padding-top:10px;">
+                <div class="col" style="padding-top:10px;">
+                    <p class="text-black-50">
+                        멤버 : 나연,정연,모모,사나,지효 미나,다현,채영,쯔위
+                        <br />
+                        리더 : 지효
+                        <br />
+                        팬덤 : 원스(ONCE)
+                        <br />
+                    </p>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <p class="text-black-50">
+                        멤버 : 윤두준,양요섭,이기광,손동운
+                        <br />
+                        리더 : 윤두준
+                        <br />
+                        팬덤 : 라이트(light)
+                        <br />
+                    </p>
+                </div>
+                <div class="col" style="padding-top:10px;">
+                    <p class="text-black-50">
+                        멤버 : 솔라,문별,휘인,화사
+                        <br>
+                        리더 : 솔라
+                        <br >
+                        팬덤 : 무무(moomoo)
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
